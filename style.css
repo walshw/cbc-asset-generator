@@ -77,6 +77,6 @@ body {
     vertical-align: middle;
 }
 
-textarea:focus, input:focus{
+textarea:focus {
     outline: none;
 }
