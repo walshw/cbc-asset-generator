@@ -1,5 +1,4 @@
 let body;
-let slider;
 let typewriter;
 let audioSource;
 let rangeInterval;
@@ -12,7 +11,6 @@ let count = 0;
 
 window.onload = () => {
     body = document.getElementsByTagName("body")[0];
-    slider = document.getElementById("slider");
     typewriter = document.getElementById("typewriter");
     audioSource = document.getElementById("userAudio");
 };
@@ -50,8 +48,6 @@ const uploadAndUseFont = (input) => {
             document.head.appendChild(style);
             typewriter.style.fontFamily = `"${fileName}"`;
             document.getElementById("fontLabel").innerText = fileName;
-
-            // startRangeLoop();
         }
         reader.readAsDataURL(input.files[0]);
     }
@@ -91,20 +87,6 @@ const startLoggingAudio = () => {
     // TODO: Find smoother ways
 
     requestAnimationFrame(startLoggingAudio);
-}
-
-const startRangeLoop = () => {
-    if (rangeInterval) {
-        clearInterval(rangeInterval);
-    }
-
-    rangeInterval = setInterval(() => {
-        slider.value = count;
-        count = (count + 1) % slider.max;
-        typewriter.style.fontWeight = count;
-
-        typewriter.style.fontVariationSettings = `"wght" ${count}, "wdth" 0`
-    }, 10);
 }
 
 const setupAudio = () => {

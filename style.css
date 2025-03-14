@@ -76,3 +76,7 @@ body {
     position: relative;
     vertical-align: middle;
 }
+
+textarea:focus, input:focus{
+    outline: none;
+}
