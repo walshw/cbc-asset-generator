@@ -1,0 +1,78 @@
+:root {
+    --paynes-gray: #476a6fff;
+    --zomp: #519e8aff;
+    --cambridge-blue: #7eb09bff;
+    --sage: #c5c9a4ff;
+    --tea-rose-red: #ecbeb4ff;
+}
+
+body {
+    color: black;
+    text-align: center;
+    padding: 8px;
+    background-color: var(--paynes-gray);
+}
+
+.inputLabel {
+    border: 2px solid var(--cambridge-blue);
+    padding: 8px;
+    background-color: var(--zomp);
+}
+
+.inputLabel:hover {
+    background-color: var(--cambridge-blue);
+}
+
+.inputLabel:active {
+    background-color: var(--paynes-gray);
+    color: black;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.buttons {
+
+}
+
+.sliders {
+    width: 30%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#typewriter {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-family: inherit;
+    font-size: 56px;
+}
+
+.typewriter:focus {
+    outline: none;
+}
+
+#picture {
+    vertical-align: middle;
+}
+
+.asset-area {
+    position: relative;
+    vertical-align: middle;
+}

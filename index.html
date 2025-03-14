@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBC Asset Generator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="controls">
+            <div class="buttons">
+                <input type="file" id="fontInput" accept=".ttf,.woff,.woff2" onchange="uploadAndUseFont(this);"
+                    style="display:none;">
+                <label for="fontInput" class="inputLabel" id="fontLabel">Select Font</label>
+                <input type="file" id="imageInput" accept="image/*" onchange="uploadAndUseImage(this);"
+                    style="display:none;">
+                <label for="imageInput" class="inputLabel" id="imageLabel">Select Image</label>
+                <input type="file" id="audioInput" accept="audio/*" onchange="uploadAndUseAudio(this);"
+                    style="display:none;">
+                <label for="audioInput" class="inputLabel" id="audioLabel">Select Audio</label>
+            </div>
+            <div class="sliders">
+                <audio id="userAudio" controls ></audio>
+                <input type="range" id="slider" min="0" max="100" />
+            </div>
+
+        </div>
+        <div class="asset-area">
+            <input id="typewriter" />
+            <img id="picture" src="./white.png" />
+        </div>
+    </div>
+</body>
+
+</html>
