@@ -40,23 +40,21 @@ body {
     row-gap: 16px;
 }
 
-.buttons {
-
-}
+.buttons {}
 
 .sliders {
     width: 30%;
-    margin:auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
 }
 
 #typewriter {
-    position:absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background: transparent;
     border: none;
     text-align: center;
@@ -64,19 +62,32 @@ body {
     font-size: 56px;
 }
 
-.typewriter:focus {
-    outline: none;
-}
-
 #picture {
     vertical-align: middle;
+    width: 100%;
 }
 
 .asset-area {
     position: relative;
-    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    resize: none;
 }
 
 textarea:focus {
     outline: none;
+    resize: both;
+}
+
+.icon {
+    border: none;
+    background-color: var(--sage);
+}
+
+.active {
+    background-color: var(--tea-rose-red);
+    border: none;
 }

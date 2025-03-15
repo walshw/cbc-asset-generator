@@ -8,6 +8,7 @@ let analyser;
 let dataArray;
 let bufferLength;
 let count = 0;
+let currentAlignment = "center";
 
 window.onload = () => {
     body = document.getElementsByTagName("body")[0];
@@ -105,3 +106,15 @@ const setupAudio = () => {
     audioSource.loop = true;
     audioSource.play();
 }
+
+const setTextAlign = (align) => {
+    if (align === currentAlignment) {
+        return;
+    }
+
+    document.getElementById(align).className = "icon active";
+    document.getElementById(currentAlignment).className = "icon";
+
+    typewriter.style.textAlign = align;
+    currentAlignment = align;
+};

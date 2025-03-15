@@ -23,9 +23,38 @@
                 <input type="file" id="audioInput" accept="audio/*" onchange="uploadAndUseAudio(this);"
                     style="display:none;">
                 <label for="audioInput" class="inputLabel" id="audioLabel">Select Audio</label>
+                <button class="icon" id="left" onclick="setTextAlign('left')">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="5" width="15" height="2" fill="black" />
+                        <rect x="0" y="10" width="10" height="2" fill="black" />
+                        <rect x="0" y="15" width="5" height="2" fill="black" />
+                    </svg>
+                </button>
+                <button class="icon active" id="center" onclick="setTextAlign('center')">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.5" y="5" width="15" height="2" fill="black" />
+                        <rect x="5" y="10" width="10" height="2" fill="black" />
+                        <rect x="7.5" y="15" width="5" height="2" fill="black" />
+                    </svg>
+                </button>
+                <button class="icon" id="right" onclick="setTextAlign('right')">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="5" width="15" height="2" fill="black" />
+                        <rect x="10" y="10" width="10" height="2" fill="black" />
+                        <rect x="15" y="15" width="5" height="2" fill="black" />
+                    </svg>
+                </button>
+                <button class="icon" id="justify" onclick="setTextAlign('justify')">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="5" width="20" height="2" fill="black" />
+                        <rect x="0" y="10" width="20" height="2" fill="black" />
+                        <rect x="0" y="15" width="20" height="2" fill="black" />
+                    </svg>
+                </button>
+            
             </div>
             <div class="sliders">
-                <audio id="userAudio" controls ></audio>
+                <audio id="userAudio" controls></audio>
             </div>
 
         </div>
